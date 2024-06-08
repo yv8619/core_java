@@ -18,3 +18,11 @@ Also, we can set some conditions or rules inside the setter getter methods to se
         throw new IllegalArgumentException("enter valid author");
         }
     }
+
+# this keyword
+When instance variables and method parameters have the same name, this is used to differentiate between them.
+ private String author;
+
+    public Book(String author) {
+        this.author = author; // 'this.author' refers to the instance variable, 'author' refers to the parameter
+    }
