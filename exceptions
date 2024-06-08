@@ -1,3 +1,44 @@
 # null pointer exception
 
-If the exception is not handled in cunrrent method, it is passed to the calling method or its parent method.
+Exception --> RunTimeException --> NullPointerException 
+
+If the exception is not handled in cunrrent method, it is it is propagated to the calling method / parent method.
+if main calls method1
+method1 calls method2
+method2 calls method3
+method3 throw null pointer exception but it is not handled. It will propagate error to method2.
+method2 will propagate error to method1.
+method1 will propagate error to main.
+
+# how to handle exception ?
+using try-catch block
+
+public class Book {
+
+    public static void main(String[] args) {
+        method1();
+    }
+
+    public static void method1(){
+        method2();
+    }
+
+    public static void method2(){
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+	at package4.Book.method2(Book.java:15)
+	at package4.Book.method1(Book.java:10)
+	at package4.Book.main(Book.java:6)
+
+ public static void method2(){
+        try {
+            String str = null;
+            System.out.println(str.length());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
