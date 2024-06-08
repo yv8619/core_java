@@ -1,6 +1,8 @@
 
 # why we create private variables 
 
+if variables are kept public, then users will be able to assign any random values to the variables which is not correct. We should retrict users to 
+enter correct values only to the variables. Hence we set variables private and use its setter method.
 If we do not want users to directly change value of variable, we set the variables as private so that we can assign a setter and getter method aorund it. 
 Also, we can set some conditions or rules inside the setter getter methods to set a value of varialbe by user. This is called encapsulation.
 
