@@ -1,0 +1,3 @@
+# null pointer exception
+
+If the exception is not handled in cunrrent method, it is passed to the calling method or its parent method.
