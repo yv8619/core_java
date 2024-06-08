@@ -1,0 +1,18 @@
+
+# why we create private variables 
+
+If we do not want users to directly change value of variable, we set the variables as private so that we can assign a setter and getter method aorund it. 
+Also, we can set some conditions or rules inside the setter getter methods to set a value of varialbe by user. This is called encapsulation.
+
+   public String getAuthor() {
+        return author;
+    }
+
+    // Setting rules to provide author name and handling exception if invalid username provided.
+    public void setAuthor(String author) {
+        if(!author.isEmpty() && author.matches("[a-zA-Z ]+")){
+        this.author = author;
+    } else {
+        throw new IllegalArgumentException("enter valid author");
+        }
+    }
