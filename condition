@@ -1,0 +1,32 @@
+# IF condition
+
+Whether to include an else statement depends on your specific needs. If you need to handle both outcomes of the condition clearly, use else. If you only need to act when the condition is true, 
+you can omit else and simply continue with the next line of code.
+
+public class TimeConverter {
+    public static int convertHoursToMinutes(int hours) {
+        if (hours > 0) {
+            return hours * 60;
+        }
+        return -1;
+    }
+}
+
+
+public class TimeConverter {
+    public static int convertHoursToMinutes(int hours) {
+        if (hours > 0) {
+            return hours * 60;
+        } else {
+            return -1; 
+        }
+    }
+}
+
+While returning, either you specify the value directly like true, false, -1  or you can specficy the condition directly ex: return ( a + b + c == 100 )  as this is a boolean condition it will return true,false.
+
+
+
+
+
+
