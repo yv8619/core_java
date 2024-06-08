@@ -1,0 +1,62 @@
+# JDBC
+
+Assume place Delhi and place Kashmir. We want apples available in kashmir. We build a road to kashmir and send a vehicle to bring the apples. To deal with kashmir people we need a translator as we dont know
+their local language. 
+
+DELHI ------ [TRANSLATOR] -----------------------------> KASHMIR
+     <----------------- VEHICLE ------------------------
+
+DELHI -- is your java application
+KASHMIR -- is the database
+ROAD -- is the connection to database
+VEHICLE -- is the sql query, stetement object
+TRANSLATOR -- driver software
+APPLE -- Result set
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class JdbcExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "root";
+        String password = "password";
+
+        try {
+            // first Load the JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish a connection
+            Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+            // Create a statement
+            Statement statement = connection.createStatement();
+
+            // Execute a query
+            String sql = "SELECT id, name FROM users";
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            // Process the results
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                System.out.println("ID: " + id + ", Name: " + name);
+            }
+
+            // Close the resources
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+
