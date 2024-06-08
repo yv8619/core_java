@@ -1,17 +1,19 @@
 # JDBC
 
-Assume place Delhi and place Kashmir. We want apples available in kashmir. We build a road to kashmir and send a vehicle to bring the apples. To deal with kashmir people we need a translator as we dont know
-their local language. 
+Assume place Delhi and place Kashmir. We want apples available in kashmir. We build a road to kashmir and send a vehicle to bring the apples. 
+To deal with kashmir people we need a translator as we dont know their local language. 
 
-DELHI ------ [TRANSLATOR] -----------------------------> KASHMIR
-     <----------------- VEHICLE ------------------------
+DELHI ----[ROAD]---------------------- [TRANSLATOR] ---> KASHMIR
+     <----------------- VEHICLE [Apple] -----------------
+     
 
 DELHI -- is your java application
 KASHMIR -- is the database
+
+TRANSLATOR -- driver software
 ROAD -- is the connection to database
 VEHICLE -- is the sql query, stetement object
-TRANSLATOR -- driver software
-APPLE -- Result set
+APPLE -- ResultSet
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -35,7 +37,7 @@ public class JdbcExample {
             Statement statement = connection.createStatement();
 
             // Execute a query
-            String sql = "SELECT id, name FROM users";
+            String sql = "SELECT * FROM customers";
             ResultSet resultSet = statement.executeQuery(sql);
 
             // Process the results
@@ -54,6 +56,27 @@ public class JdbcExample {
         }
     }
 }
+
+Que ) explain various statements available in jdbc ?
+Ans ) Statement ( simple sql query w.o any parameters )
+      PreparedStatement ( sql query with parameters )
+      CallableStatement ( stored producedures )
+
+ResultSet rs = stmt.executeQuery("SELECT * FROM employees");
+
+Connection con = DriverManager.getConnection(url, user, password);
+String sql = "SELECT * FROM employees WHERE department = ?";
+PreparedStatement preparedStatement = con.prepareStatement(sql);
+preparedStatement.setString(1, "Sales");
+ResultSet rs = preparedStatement.executeQuery();
+
+Connection con = DriverManager.getConnection(url, user, password);
+String sql = "{call getEmployeeById(?)}";
+CallableStatement cstmt = con.prepareCall(sql);
+cstmt.setInt(1, 1001);
+ResultSet rs = cstmt.executeQuery();
+
+
 
 
 
