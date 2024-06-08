@@ -1,1 +1,27 @@
+# Array
 
+int[] arr1 = new int[5];
+int[] arr2 = new int[]{1,2,4,5,6};
+int[] marks = {1,2,3,4,5};  ---> shortest way to initialize array
+
+Iterate through array --
+
+for(int mark:marks){
+  sum = sum + mark;
+}
+
+If you want to print array directly on console w.o iterating it , use Arrays.toString()
+String[] names = {"yash","ram","bom"};
+System.out.println(Arrays.toString(names));
+
+whats the difference in using enhanced for loop and Arrays.toString() to print array content on console
+The enhanced for loop iterates over each element of the array and allows you to perform custom operations on each element, including printing them. 
+where as Arrays.toString() only prints the content as is , you cannot perform any operation on the elements.
+
+# array comparison
+int[] arr1 = {1,2,4,5,6};
+int[] arr2 = {1,2,4,5,6};
+Arrays.equals(arr1, arr2);
+  
+
+# ArrayList
