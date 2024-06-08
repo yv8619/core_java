@@ -1,1 +1,37 @@
+# throws
+
+Use it with method signature.
+when you want to indicate that a method can throw certain exceptions, and you don't want to handle them within the method itself.
+
+public class ThrowsExample {
+    public static void main(String[] args) {
+        try {
+            checkAge(15);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    static void checkAge(int age) throws IllegalArgumentException {
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be 18 or older.");
+        }
+    }
+}
+
+method declares that it might throw an IllegalArgumentException. The caller of the method (in this case, the main method) must handle the exception, 
+which it does using a try-catch block.
+
+# throw
+used inside the method to manually trigger an exception.
+
+public class ThrowExample {
+    public static void main(String[] args) {
+        int age = 15;
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be 18 or older.");
+        }
+        System.out.println("Access granted.");
+    }
+}
 
