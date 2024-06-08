@@ -1,0 +1,15 @@
+# The main method should only allow user to call the methods but it should not expose how the method is written. This is called abstraction.
+
+When you create object and if you want to set some default values of the object properties, we use constructor. Intead of using setter to set value, we can use
+contructor.
+For ex: we create  object of bike, and we want to set a default speed of bike.
+
+public class Bike() {
+
+class Bike(int speed) {
+  speed = this.speed;
+}}
+
+## when we create object
+Bike b = new Bike();  / Bike() is the contructor i.e we are setting its default value once object is created.
+
