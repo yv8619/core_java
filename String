@@ -1,1 +1,43 @@
 
+Using new keyword
+String str = new String("Test");
+
+String literal. literal is a sequence of characters enclosed in double quotes
+String str = "Test";  
+
+Some important string methods :
+str.length()
+str.charAt(2)                       //  Returns the character at the specified index.
+str.subString(2,5)
+str.indexOf("enclosed")             // Returns the index of the first occurrence of the specified character.
+str.lastIndexOf("enclosed")         // Returns the index of the last occurrence of the specified character.
+str.equals("enclosed")              // string comparison
+str.equalsIgnoreCase("enclosed")
+str.trim()
+str.replace("hallo", "hello")
+str.split(",")
+str.contains("enc")
+str.startsWith("hel")
+str.endsWith("llo")
+str.concat("world")
+str.toUppaerCase()
+str.toLowerCase()
+
+String.valueOf(123)                 // returns string representation
+==============================================================================================================
+
+Why string is immutable ?
+
+# cancatention order of evaluation
+works left to right
+ex: 10 + 20 + " hello"  ---> 30 hello
+    "hello" + 10 + 20   ---> hello1020   ( first 10 attaches to hello, then 20 attaches to hello10 )
+    "hello" + (10+20)   ---> hello40     ( anything in bracket is given first priority )
+
+
+
+
+
+
+
+
