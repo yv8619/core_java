@@ -1,1 +1,36 @@
 
+object ----------- byte stream ---------> file , memory, db
+
+If you want to save object in a file or memory or database, it should be converted into byte stream.
+The process of converting an object into a byte stream, making it easy to save the object to a file or send it over a network is called Serailization.
+Deserialization is the reverse process, where the byte stream is converted back into a copy of the original object. 
+This allows for persistent storage and the transfer of objects between different parts of a program or between different programs.
+
+how to do ?
+- first the class whose object is to be converted to byte stream should implement Serializable interface.
+- This interface do not contain any method.
+- define the location where you want to store the object.
+- pass the location variable to writeObject method of ObjectOutputStream class.
+
+
+        Person person = new Person("John Doe", 30);
+        String filename = "C:/Textfile.txt"
+        FileOutputStream fos = new FileOutputStream(filename);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(person);
+
+
+        Person person = new Person("John Doe", 30);
+        String filename = "C:/Textfile.txt"
+        FileInputStream fis = new FileInputStream(filename);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        Person p = (Person)ois.readObject(person);
+        sout(p.name);
+        sout(p.age);
+
+Avoid using Serializable interface, instead use Jackson library. 
+Serialization:   java object --> JSON 
+De-Serialization:  JSON --> java object
+
+
+
