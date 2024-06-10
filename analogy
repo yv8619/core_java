@@ -1,0 +1,16 @@
+class - home
+object - humans
+variables - age, height
+methods - human behaviour like eating , sleeping etc
+interface -  interface can be thought of a blueprint that all homes must follow, like having a door, windows, behaviour . How these door, 
+             window, behaviour is to be,  should be implemented by user.
+
+ex:
+AccountNumberResponse getLoanDetail(RequestHeader requestHeader) {}
+
+so , using a behaviour we are returning which home it would be. If the behaviour is bad having habbits of drinking,smoking(method params we pass)
+we would say it is home 1520. and that home would have its own behavours and variables.
+
+
+
+
