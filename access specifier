@@ -1,0 +1,8 @@
+
+private - class
+
+default - class + in package
+
+protected - class + in package + out package
+
+public - anywhere, by child class also.
