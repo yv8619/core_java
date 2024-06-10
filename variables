@@ -26,3 +26,18 @@ When instance variables and method parameters have the same name, this is used t
     public Book(String author) {
         this.author = author; // 'this.author' refers to the instance variable, 'author' refers to the parameter
     }
+
+why do we need wrapper classes ?
+- collection framework, such as ArrayList, HashSet, etc., can only handle objects, not primitive types. 
+  Wrapper classes provide a way to use primitives within these collections.
+ - Java's collections are implemented using generics, which require a type parameter that must be an object 
+  (a subclass of java.lang.Object). Primitive types like int, char, boolean, etc., are not objects and do not 
+  inherit from java.lang.Object.
+ - When you define a collection, you specify the type of elements it can contain using generics
+
+   ArrayList<Integer> list = new ArrayList<>();  
+
+ - Collections can store null values, which is useful to indicate the absence of a value. Primitives cannot 
+   represent null.
+ - 
+
