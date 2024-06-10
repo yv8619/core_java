@@ -1,1 +1,35 @@
-Generics
+
+To provide type safety and to resolve type casting problem, Generics was introduced.
+
+Before Generics, we could add any data type to collection.
+List list = new ArrayList();
+list.add("Hello");
+list.add(123); 
+
+With generics, you specify the type that the collection should hold:
+List<String> list = new ArrayList<>();
+list.add("Hello");
+
+<T>  Type of element
+
+public class Players<T> {
+T noOfPlayers;    // T would be the data type of noOfPlayers which will be taken on fly
+
+public Players(T noOfPlayers){
+  this.noOfPlayers = noOfPlayers;
+}
+
+other usages:
+public class Players<T V>
+public class Players<T extends Animal>
+
+// if you want to show list of objects i.e it is unknown what would be the data type we use wildcard.
+private static void printList(List<?> myList){
+
+}
+
+
+
+
+
+
