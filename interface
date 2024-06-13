@@ -1,1 +1,19 @@
+a fully abstract class is called interface. Like abstract class,  we cannot create object of interface.
+Interface is impemented using implement keyword.
+all the methods should be implemented by the class impementing the interface.
+
+- by default all the methods are abstract in interface, we dont need to explicltly specify method as abstract.
+- all the methods are public by default so that it can be implemented by the classes.
+- the advantage of using interface is that a class can implement multiple interfaces compared to abstract class which can be extended only 1
+- Interfaces allows us to achieve multiple inheritance.
+- fields in interface are public, static, final by default, so you dont need to explicitly define. 
+
+- since 100s of classes may have implemented an interface, if you add any new method to interface then all the classes implementing that interface will start
+  throwing error. To avoid this, java provides a default method in interface which classes can override anytime when user want and will not be compulsary to be
+  implemented. The default method is concrete method i.e with a body.
+
+  default void walking(){
+    System.out.println("Animal is walking");
+  }
+
 
