@@ -1,1 +1,7 @@
+It is the mechanism of wrapping the varialbe and the methods into a single unit, 
+typically a class, and restricting the direct access to some of the object's components.
 
+variables - are private
+methods - are private
+
+access these using getter, setter. Helps in applying conditions to get, set data.
