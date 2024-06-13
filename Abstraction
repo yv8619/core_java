@@ -1,15 +1,24 @@
-# The main method should only allow user to call the methods but it should not expose how the method is written. This is called abstraction.
+An abstract class cannot be instantiated i.e its object cannot be created.
+( class is a blueprint of objects. when we create object of class it means we are creating instance of class.
+  Instantiation means , creating object of class )
+If a class have abstract and non abstract method, it is called abstract class.
+if a class have even 1 abstract method, the class should be declared as abstract.
+If a child class extends abstract class, then it must implement all its methods.
 
-When you create object and if you want to set some default values of the object properties, we use constructor. Intead of using setter to set value, we can use
-contructor.
-For ex: we create  object of bike, and we want to set a default speed of bike.
+abstract class vehicle() {
+   abstract void speed();   // method w.o body is called abstract method
+   void brakes() {          // full method
+   }
+}
 
-public class Bike() {
+public class bike extends vehicle(){
+@Override
+void speed(){};
 
-class Bike(int speed) {
-  speed = this.speed;
-}}
+@Override
+void brakes(){};
+}
 
-## when we create object
-Bike b = new Bike();  / Bike() is the contructor i.e we are setting its default value once object is created.
+
+
 
