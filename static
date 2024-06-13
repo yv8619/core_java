@@ -1,0 +1,35 @@
+variable types
+
+instance variable  - these vars are created at class level. when you create object or instance of class, you can use these variables and assign any value.
+local variable - created inside method.
+static variable - if you want all object to have same value of a particular variable, then declare it as static. i.e static variables are shared by all objects.
+so if you change value of static variable, it will reflect in all objects.
+
+If you see in below example, the eyes remain same for all animals i.e 2 . we dont need to explicity declare again n again in all objects. rather declare it
+static. And it should be therefore called by class name and not object name.
+
+class Animal {
+ String name;
+ int legs;
+ static int eyes;
+
+ public static void main() {
+    Animal a = new Animal();
+    a.name =  "dog";
+    a.legs = 4;
+    Animal.eyes = 2;
+
+    Animal b = new Animal();
+    b.name =  "cat";
+    b.legs = 4;
+    Animal.eyes = 2;
+ }
+}
+
+why main in static ?
+if we make main method non static, then it has to be accessed via object. we have to create object of main class. but main in the starting point of exectuion
+if execution itself did not start how do we create its object. thats why main in static.
+
+static block 
+  
+
