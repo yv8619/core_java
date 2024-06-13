@@ -1,0 +1,21 @@
+lets consider a class having x,y,z methods.
+another class also implement the same method x,y,z.
+This causes duplicacy. To avoid this, the second class can use the same methods already available. 
+first class is called parent class, second class is called child class. This concept is called Inheritance.
+The keyword extends is used to define a subclass.
+
+now, after the methods are inherited you can provide your own custom implementation to the parent methods. This is called method over riding.
+Also known as run time polymorphism.
+
+Types of inheritance:
+single inheritance : father-child relation
+multi level inheritance :  grandfather - father - child relation
+heirarchial inheritance :  father - child1 child2 child3 child4
+
+multiple inheritance : father1 father2 - child   :) not allowed. 
+
+
+
+
+
+
