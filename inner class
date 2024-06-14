@@ -1,0 +1,42 @@
+class inside a class is called inner class.
+
+class A {
+
+int a = 10;
+
+void show() {
+  s.o.u.t("in show")
+}
+
+class B {
+  void config() {
+  s.o.u.t("inner class")
+}
+}}
+
+public class Demo {
+ p.s.v.m(){
+   // B b = new B()
+   A.B b = obj.new B();
+ }
+}
+
+Anonymous inner class 
+----------------------
+what if you want to change the behaviour of a class method without using inheritance concept i.e without extending the class ?
+if there is a class of which object will be created and used only once, then we do not need to create a class for it. 
+after creating object of class, dont give semi coloN and instead give braces which shows a class.
+
+class A {
+  void show() {
+     s.o.u.t("another class")
+  }
+}
+
+public class Demo {
+ p.s.v.m(){
+   A a = new A() {
+      void show() {
+         s.o.u.t("anonymous class")
+    }
+   }}}
