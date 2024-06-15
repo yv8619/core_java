@@ -1,0 +1,50 @@
+map does not extend collection interface but it is part of collection.
+
+if List,ArrayList if you see to fetch elements there is indexing 0,1,2,3 ... but what if instead of indexing we have name to each index ie. key-value
+
+Map<String, Integer> students = new HashMap<>();
+students.put("naveen", 90);
+students.put("ajay", 40);
+students.put("kiran", 60);
+
+s.o.u.t(students.get("ajay"));
+
+Since you are mapping key with value, it is called Map. You give a key, you get a value. 
+
+What if there are 2 same key what value will you get ?
+map will get confused, so it does not allow 2 same keys to exist. key should be always unique. 
+so it act like a set as set is also should be unique , no duplicate allowed.
+
+how to print all map elements ?
+In list we had single elements to print using their indexing position. but here we have a key and pair.
+first we extract all keys
+
+s.o.u.t(students.keySet());
+
+for(String key: students.keySet()) {
+  s.o.u.t(key + ":" + student.get(key))
+  s.o.u.t(key + ":" + student.get(key))
+}
+
+why does it have put method ?
+Just like is api put method, it either updates existing value or if key is not present it will create a new value.
+
+// searching key
+if(students.containKey("naveen"){
+  s.o.u.t("present")
+}
+
+// retrieving value of key
+students.getKey("naveen");
+
+
+
+
+
+
+
+
+
+
+
+
