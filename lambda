@@ -1,2 +1,52 @@
+most imp feature of java8 is lambda, functional interface which is used to call lambda expression.
+
+imperative programming vs functional programming
+-------------------------------------------------
+imperative style is the old style of writing program where we give step by step of executing any logic . ex: creating vars, loop etc.
+functional programming is high level style of writing logic where we give high level instructions only.
+
+lambda function
+--------------
+In old style function have a name, in functional style a lambda function do not have any name ie it is anonymous.
+lambda have params, body, return type but they are not tied to any class. i.e you dont need to create object of any class to call them.
+
+Imperative way:
+---------------
+public void sum(){
+  s.o.u.t("single expression")
+}
+
+functional way
+--------------
+() -> s.o.u.t("single expression")
+
+(a,b) -> {
+  s.o.u.t(a+b)
+}
+
+
+(params) -> {
+s.o.u.t("multi expression");
+s.o.u.t("multi expression");
+}
+
+npw, you cannot simply write lambda function in your program, the compiler will not recognize it. lambda fn needs to be used in conjunction with a
+functional interface. A fn interface is a interface with exactly 1 abstract method.
+
+@FunctionalInterface 
+public interface addition(){
+  int add(int a,int b);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
