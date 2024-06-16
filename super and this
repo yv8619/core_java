@@ -1,1 +1,54 @@
+class A {
+ public A(){
+      s.o.u.t("in A contructor");
+   }
+public A(int N){
+      s.o.u.t("in A with N");
+   }
+}
 
+class B {
+   public B(){
+      super();
+      s.o.u.t("in B contructor");
+   }
+
+  public B(int N){
+  //  super(N);
+      this();
+      s.o.u.t("in B with N");
+   }
+}
+
+class Demo {
+ B b = new B();
+ B b = new B(5);
+}
+
+CASE 1:
+- when you create object of B class, it will call default constrcutor of B class. and this contrcutor will internally call constructor of A class.
+  so output will be,
+  in A contructor
+  in B contructor
+- This is because in all subclass constructor by default the very first line is super() keyword which is not visible to user but it is present.  
+  super() is used to call the constructor of the parent class (superclass). 
+
+CASE 2:
+- if you create paramterised object of class B, then output will be
+  in A contructor
+  in B with N
+  This is again because even a paremeterised contructor created in subclass B will have super() by default.
+
+CASE 3:
+- if you want to call paramterised constrcutor of super class, then we set paramterised super()
+in A with N
+in B with N
+
+CASE 4: this keyword
+- what if you want to call both constructor of subclass and defeault contructor of super class. Then we use this() keyword. this calls default constrcutor of
+  current class.
+in A contructor
+in B contructor
+in B with N
+  
+  
