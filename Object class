@@ -1,0 +1,41 @@
+object class is the super class of all classes.
+There are 9 methods in object class - 
+
+final methods
+-------------
+getClass()
+notify()
+notifyAll()
+wait()
+
+non final methods
+-----------------
+toString()
+equals()
+hashCode()
+clone()
+finalize()
+
+ps.v.m(){
+  Person person = new Person()
+  Class myclass = person.getClass();    --> returns location of class
+  Class myclass = person.getSimpleName();  --> returns class name
+}
+
+toString() - 
+why we need to override toString() method - toString() by default returns getClass()+@+hashcode ...  Person@h5d2495wdssfk443 which is not helpful
+if you want your own custom print, we override toString() method.
+
+ @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + "}";
+    }
+
+Person person = new Person("Alice", 30);
+System.out.println(person);   // this will print Person class using toString() method.  
+whenver you do, s.o.u.t it internally calls toString() method always.
+
+
+
+
+
