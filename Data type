@@ -1,0 +1,44 @@
+
+boolean    1 bit
+  
+byte       8 bits
+short      16 bits
+  
+int        32 bits 
+long       64 byte
+float      32 bits
+double     64 bits
+  
+char       16 bits
+
+declaration
+-----------
+  int a;
+
+initialization
+--------------
+  int a = 10;
+
+instantiation
+-------------
+Person person = new Person();
+
+Type Casting
+------------
+  Assigning one primitive data type to another type is called type casting.
+  - upcasting or implicit casting or widening casting ( if you are promoting small data type to big data type compiler do not oppose. just like our promotion :) )
+  - downcasting or explicit casting or narrowing casting ( its like demotion, compiler would complain. big data type to small data type )
+
+  big data type = small data type;   // upcasting
+  small data type = ( small data type ) big data type;     // downcasting
+
+  upcasting - no loss of data.
+  downcasting - loss of data
+
+  
+
+
+
+
+
+  
