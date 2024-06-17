@@ -8,3 +8,14 @@ jdk 11
 jdk 17
 jdk 21
 
+vendors:
+open jdk
+oracle jdk
+Adoptium jdk
+
+Which JDK to Choose?
+OpenJDK: Choose this if you need a free, open-source JDK and are comfortable with community support.
+Oracle JDK: Opt for this if you require commercial support, additional tools, and performance optimizations.
+Adoptium JDK: Use this if you want a free, open-source JDK with a focus on cross-platform compatibility and reliability.
+
+
