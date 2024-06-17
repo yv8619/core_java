@@ -1,0 +1,15 @@
+single line comment
+// 
+
+multi line comment
+/*
+
+*/
+
+java doc - This appears before a class,method,enum,constructor .. explaining usage of class,method,enum,constructor .. 
+/**
+@param
+@version
+@author
+@return
+*/
