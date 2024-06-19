@@ -1,5 +1,8 @@
 map does not extend collection interface but it is part of collection.
 
+what is hash ?
+hashing is an algorithm which provides hash code for an object used in hash-based collections like HashMap and HashSet.
+
 if List,ArrayList if you see to fetch elements there is indexing 0,1,2,3 ... but what if instead of indexing we have name to each index ie. key-value
 
 Map<String, Integer> students = new HashMap<>();
