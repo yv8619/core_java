@@ -1,14 +1,26 @@
 
+You can declare string in 2 ways - 
 Using new keyword
 String str = new String("Test");
 
-String literal. literal is a sequence of characters enclosed in double quotes
+Priitive style like int a = 10. This is called String literal. Saves lots of memory.
 String str = "Test";  
 
-Some important string methods :
+- when string is created using new keyword then a new object is created everytime,
+- when string is created in primitive style, they are stored in string pool ( like a swimming pool) within heap memory. 
+So if same string data is created again, jvm will first check in the pool first if given string already present or not. 
+If present, it will point the reference to this string.
+
+String a = "hello"
+String b = "hello"
+a and b will point to same memory location. 
+
+===================================================================================================================================================
+
+non static methods of string:
 str.length()
 str.charAt(2)                       //  Returns the character at the specified index.
-str.subString(2,5)
+str.substring(2,5)
 str.indexOf("enclosed")             // Returns the index of the first occurrence of the specified character.
 str.lastIndexOf("enclosed")         // Returns the index of the last occurrence of the specified character.
 str.equals("enclosed")              // string comparison
@@ -22,8 +34,16 @@ str.endsWith("llo")
 str.concat("world")
 str.toUppaerCase()
 str.toLowerCase()
+str.replace("Hi","Hello")
 
-String.valueOf(123)                 // returns string representation
+# static methods of string:
+String.valueOf(123)                 // to convert primitive data type into string
+
+# static method of wrapper class, used to convert string into primitive data type
+Integer.parseInt("123")          
+Double.parseDouble()
+Float.parseFloat()
+Long.parseLong()
 ==============================================================================================================
 
 Why string is immutable ?
@@ -33,6 +53,19 @@ works left to right
 ex: 10 + 20 + " hello"  ---> 30 hello
     "hello" + 10 + 20   ---> hello1020   ( first 10 attaches to hello, then 20 attaches to hello10 )
     "hello" + (10+20)   ---> hello40     ( anything in bracket is given first priority )
+
+how to print "Hello" with quotes ?
+Using bacslash \ before quote
+s.o.u.t("\"Hello\"");
+
+- mutable string
+If you want to do parallel execution, use StringBuffer as it is thread safe. i.e multiple process can use the same thread .
+if you want high performance and thread safety is not concern use stringBuilder class.
+
+StringBuilder sb = new StringBuilder();
+sb.append()
+sb.insert()
+sb.reverse()
 
 
 
