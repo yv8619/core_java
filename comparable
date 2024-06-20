@@ -17,8 +17,8 @@ This is where comparable and comparator is used.
 comparable - sorting based on sinle object property.
 comparator - sorting based on multiple object properties.
 
-Comparable: Comparison logic is inside the class being compared.
-Comparator: Comparison logic is outside the class being compared.
+Comparable: Comparison logic is inside the class being compared. Method: int compareTo(T o)
+Comparator: Comparison logic is outside the class being compared. Method: int compare(T o1, T o2)
 
 public class Person implements Comparable<Person> {
     private String name;
