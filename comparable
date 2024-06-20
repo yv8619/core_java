@@ -1,0 +1,43 @@
+comparable vs comparator 
+
+comparable comes from java.lang package.
+comparator comes from java.util package.
+
+let say we have an ArrayList of Integer class
+
+Arrayist<Integer> al = new ArrayList<>();
+al.add(12);
+al.add(15;
+al.add(20);
+Collections.sort(al);  
+
+now its easy to sort based on Integer . but what if the array list is of type object. An object may have many properties. On what basis it will sort ?
+This is where comparable and comparator is used. 
+
+comparable - sorting based on sinle object property.
+comparator - sorting based on multiple object properties.
+
+Comparable: Comparison logic is inside the class being compared.
+Comparator: Comparison logic is outside the class being compared.
+
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+
+    @Override
+    public int compareTo(Person other) {
+        return this.age - other.age;    
+    }
+
+
+# For comparator, what ever we want to compare we will have to create class for it
+
+import java.util.Comparator;
+
+public class PersonNameComparator implements Comparator<Person> {
+    @Override
+    public int compare(Person p1, Person p2) {
+        return p1.getName().compareTo(p2.getName());
+    }
+}
+
