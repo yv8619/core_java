@@ -1,0 +1,37 @@
+
+Collection is a root interface in the Java Collections Framework. It is part of the java.util package.
+
+List is an interface which extends collection interface. 
+List maintains order.
+Allows duplicate elements.
+
+classes which implement Interface
+---------------------------------
+ArrayList
+LinkedList
+
+If the goal is to have faster access to list elements ---> ArrayList
+intertion,removal is slow in arraylist.
+
+If the goal is to have faster insertion and removal of elements ---> LinkedList
+access is slow in linkedlist.
+
+List<String> books = new ArrayList<>();
+books.add("The Hobbit");
+books.remove("1984");
+books.contains("hobbit")
+
+How do you convert an array to a List in Java ?
+Using Arrays.asList():
+
+String[] array = {"yash", "ram", "bom"};
+List<String> list = Arrays.asList(array);
+List<String> list = new ArrayList<>(Arrays.asList(array));
+
+why would we convert a array to list ?
+The List interface provides more functionality than arrays. For example, you can easily add, remove, or modify elements, whereas arrays have a fixed size 
+and do not provide such methods. Also other methods like Sorting the list, shuffling the list.
+Collections.sort(list);
+Collections.shuffle(list);
+
+
