@@ -1,0 +1,30 @@
+Set do not allow duplicates
+
+Iterating over set
+
+1) enhanced for loop
+
+Set<String> set = new HashSet<>();
+set.add("Apple");
+set.add("Banana");
+set.add("Orange");
+
+for (String item : set) {
+    System.out.println(item);
+}
+
+2) Iterator - This method allows more control over the iteration process, including the ability to remove elements during iteration.
+
+Iterator<String> iterator = set.iterator();
+while (iterator.hasNext()) {
+    String item = iterator.next();
+    System.out.println(item);
+}
+
+3) lambda expression
+set.forEach(item -> System.out.println(item));
+
+4) streams
+set.stream().forEach(System.out::println);
+
+
