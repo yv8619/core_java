@@ -1,3 +1,23 @@
+The Map interface in Java represents a collection of key-value pairs. Each key is unique, and each key maps to exactly 
+one value. The Map interface is part of the java.util package.
+
+1) enter key value using put method.
+map.put(key,value)
+
+2) to check existence of key , value
+map.containsKey(key)
+map.containsValue(value)
+
+3) check the size of map
+map.size()
+
+4) enter multiple key-value pairs in one go
+Map<String, Object> headers = Map.ofEntries(
+            Map.entry("key1", 1),
+            Map.entry("key2", 2),
+            Map.entry("key3", 3)
+        );
+
 map does not extend collection interface but it is part of collection.
 
 what is hash ?
