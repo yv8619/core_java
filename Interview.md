@@ -36,6 +36,9 @@ Method overloading in Java is a feature that allows a class to have more than on
 This means that the method to be invoked is determined at compile time, based on the method signature and the arguments provided. 
 The decision about which overloaded method to invoke is made during the compilation process, not at runtime.
 
+## can we overload static methods ?
+Yes, if the methods have diff input parameters it can be overloaded.
+but if there are no input parameters or if the number of parameters and types of parameters is the same and method differ only by static key word then we cannot overload it.
 
 
 
