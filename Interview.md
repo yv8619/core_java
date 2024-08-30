@@ -20,7 +20,32 @@ to a field in the current class and super to call a method from the superclass.
 - System.in is used to read input from the console often used with Scanner class.
   Scanner scanner = new Scanner(System.in);
 
-## 
+## Tell me about final, finally, finalize ?
+- final is a keyword, finally is a block and finalize is a method.
+- final keyword is used to apply restrictions on variable, method and class. A final variable cannot be reassigned, a final method cannot be cannot be overridden by 
+  subclasses and final class cannot be extended. ex: If you dont your test classes to be extended further, declare it final.
+- finally block is used in exception handling. It is a block that follows a try-catch structure and is used to execute important code such as closing resources, 
+  regardless of whether an exception is thrown or not. The finally block is always executed, even if an exception occurs.
+- A method used to perform cleanup before an object is garbage collected.
+
+## what is the order of call of constructors in inheritance ?
+- In case of inheritance when object of child class is created, then parent class contructor is invoked first and then child class contructor.
+
+## explain method overloading ?
+Method overloading in Java is a feature that allows a class to have more than one method with the same name, as long as their parameter lists (i.e., the type, number, or order of parameters) are different. Method overloading is determined at compile time (also known as compile-time polymorphism or static polymorphism).
+This means that the method to be invoked is determined at compile time, based on the method signature and the arguments provided. 
+The decision about which overloaded method to invoke is made during the compilation process, not at runtime.
+
+
+
+
+
+
+
+
+
+
+  
   
 
 
