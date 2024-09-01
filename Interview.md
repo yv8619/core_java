@@ -40,6 +40,10 @@ The decision about which overloaded method to invoke is made during the compilat
 Yes, if the methods have diff input parameters it can be overloaded.
 but if there are no input parameters or if the number of parameters and types of parameters is the same and method differ only by static key word then we cannot overload it.
 
+## can we have multiple main method in an application ?
+Yes, in Java, it is perfectly fine to have the main method in more than one class within an application. The main method serves as the entry point for the program, and having multiple main methods allows you to run different parts of the application independently, if needed.
+While multiple main methods are useful during development and testing, when deploying the application, you'll typically specify one main method as the primary entry point.
+
 
 
 
